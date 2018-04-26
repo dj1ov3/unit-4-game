@@ -1,0 +1,62 @@
+header{
+    background-color:orange;
+    color:white;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.instructions{
+    background-color: bisque;
+    color:green;
+    width:450px;
+
+}
+
+.randomNum{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    float:left;
+    margin-right: 20px;
+    font-size: xx-large;
+    
+
+}
+
+.tallyScore{
+    background-color: turquoise;
+    float:left;
+    height: 100px;
+    width: 100px;
+}
+
+
+
+#stone1,
+#stone2,
+#stone3,
+#stone4{
+    
+    float:left;
+    margin-right: 20px;
+}
+
+img{
+    width:50px;
+    height: 70px;
+}
+
+.textBox{
+    background-color:teal;
+    color:white;
+    width: 200px;
+    margin-bottom:10px;
+}
+
+.numberBox{
+    background-color:teal;
+    color:white;
+    width: 200px;
+    height: 80px;
+}
