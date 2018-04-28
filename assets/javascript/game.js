@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    // setupGame();
     
-    // function setupGame(){
+    
+    
     
         var numGoal = Math.floor(Math.random() *101) + 19;
         var wins = 0;
@@ -29,31 +29,29 @@ $(document).ready(function(){
         //when game starts assign each crystal a random number. and display the number to match
     
    
-        // function gameStart(){
+        $(".randomNum").text(numGoal);
+
+        for(var i=0; i < crystalObj.length; i++){
+            $("#stone1").val(Math.floor(Math.random()*12)+ 1);
+            $("#stone2").val(Math.floor(Math.random()*12)+ 1);
+            $("#stone3").val(Math.floor(Math.random()*12)+ 1);
+            $("#stone4").val(Math.floor(Math.random()*12)+ 1);
+
+        };
+
+
+
         
-            $(".randomNum").text(numGoal);
-
-            for(var i=0; i < crystalObj.length; i++){
-                $("#stone1").val(Math.floor(Math.random()*12)+ 1);
-                $("#stone2").val(Math.floor(Math.random()*12)+ 1);
-                $("#stone3").val(Math.floor(Math.random()*12)+ 1);
-                $("#stone4").val(Math.floor(Math.random()*12)+ 1);
-
-            };
 
 
-
-        // };
-
-
-    //testing
-    console.log($("#stone1").val());
-    console.log($("#stone2").val());
-    console.log($("#stone3").val());
-    console.log($("#stone4").val());
-
-
-    //on button click display and add to total score
+        //testing
+        console.log($("#stone1").val());
+        console.log($("#stone2").val());
+        console.log($("#stone3").val());
+        console.log($("#stone4").val());
+        //------------------------------------------------------------------------------------------
+    
+     //on button click display and add to total score
 
     
         $("button").on("click", function(){
@@ -66,7 +64,17 @@ $(document).ready(function(){
                 alert("You Win!")
                 wins++;
                 $("#wins").text("Wins: " + wins);
-                restartGame();
+
+                currentNum = 0;
+                $(".numberBox").text("");
+
+                resetGame();
+
+                //testing
+                console.log($("#stone1").val());
+                console.log($("#stone2").val());
+                console.log($("#stone3").val());
+                console.log($("#stone4").val());
 
 
 
@@ -75,39 +83,49 @@ $(document).ready(function(){
                 alert("You Lose!")
                 losses++;
                 $("#losses").text("Losses: " + losses);
-                restartGame();
+
+                currentNum = 0
+                $(".numberBox").text("");
+
+                resetGame();
+
+
+                //testing
+                console.log($("#stone1").val());
+                console.log($("#stone2").val());
+                console.log($("#stone3").val());
+                console.log($("#stone4").val());
 
             } else{};
 
         });
-    // };
-
-    // function restartGame() {
-        
-    //     this.currentNum = 0;
-    //     $(".randomNum").text("");
-        
-    //     this.setupGame();
-        
-    //   };
+   
 
 
 
-    // function reset(){
-    //     currentNum = 0;
-    //     $(".randomNum").text(numGoal);
 
-    //     // for(var i=0; i < crystalObj.length; i++){
-    //         $("#stone1").val(Math.floor(Math.random()*12)+ 1);
-    //         $("#stone2").val(Math.floor(Math.random()*12)+ 1);
-    //         $("#stone3").val(Math.floor(Math.random()*12)+ 1);
-    //         $("#stone4").val(Math.floor(Math.random()*12)+ 1);
-
-    //     // };
+        function resetGame(){
+            numGoal = Math.floor(Math.random() *101) + 19;
+            
 
 
-    // };
+            $(".randomNum").text(numGoal);
+            console.log(numGoal);
 
+
+            for(var i=0; i < crystalObj.length; i++){
+                $("#stone1").val(Math.floor(Math.random()*12)+ 1);
+                $("#stone2").val(Math.floor(Math.random()*12)+ 1);
+                $("#stone3").val(Math.floor(Math.random()*12)+ 1);
+                $("#stone4").val(Math.floor(Math.random()*12)+ 1);
+
+            };
+
+
+
+        };
+
+    
     
     
 });

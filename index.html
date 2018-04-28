@@ -3,6 +3,10 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
@@ -11,6 +15,7 @@
 <header>
     <h1>Crystals Collector!</h1>
 </header>
+<div class="container">
     <div class="instructions">
         <p>You will be given a random number at the start of the game.
         <br>
@@ -28,34 +33,58 @@
     </div>
     <!-- second row with the random number, wins & losses -->
     <div class="row">
-        <div class="randomNum"></div>
-        <div class="tallyScore">
-            <div id="wins">Wins: </div>
-            <br>
-            <div id="losses">Losses:</div>
+        <div class="col-md-4">
+            <div class="randomNum"></div>
+        </div>
+        <div class="col-md-4">    
+            <div class="tallyScore">
+                <div id="wins">Wins: </div>
+                <br>
+                <div id="losses">Losses:</div>
+            </div>
         </div>
     </div>
 
     <br style="clear:both">
     <!-- row with the crystals -->
-    <button class="crystal" id="stone1" value="">
-        <img src="assets/images/ruby.jpg" alt="ruby">
-    </button>
-    <button class="crystal" id="stone2" value="">
-        <img src="assets/images/diamond.png" alt="diamond">
-    </button>
-    <button class="crystal" id="stone3" value="">
-        <img src="assets/images/gem.jpg" alt="gemstone">
-    </button>
-    <button class="crystal" id="stone4" value="">
-        <img src="assets/images/green-gem.jpg" alt="green gem">
-    </button>
+    <div class="row">
+        
+        
+        <button class="crystal" id="stone1" value="">
+            <img src="assets/images/ruby.jpg" alt="ruby">
+        </button>
 
+
+        <button class="crystal" id="stone2" value="">
+            <img src="assets/images/diamond.png" alt="diamond">
+        </button>
+
+        <button class="crystal" id="stone3" value="">
+            <img src="assets/images/gem.jpg" alt="gemstone">
+        </button>
+
+        <button class="crystal" id="stone4" value="">
+            <img src="assets/images/green-gem.jpg" alt="green gem">
+        </button>
+        
+
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+    </div>
+
+   
+    
     <br style="clear:both">
     <!-- total score and current number -->
     <div class="textBox">Your total score is: </div>
     <div class="numberBox"></div>
-
+</div>
 
 
 

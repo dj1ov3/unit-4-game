@@ -1,3 +1,7 @@
+body{
+    background-image: url("../../assets/images/cave.jpg");
+}
+
 header{
     background-color:orange;
     color:white;
@@ -39,7 +43,7 @@ header{
 #stone4{
     
     float:left;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 img{
